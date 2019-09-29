@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            background: url(fon.gif);
+        }
+        h1{
+            text-align: center;
+            font-size: 40px;
+            margin-top: 5px;
+        }
+        p{
+            line-height: 3;
+            font-size: 20px;
+        }
+        table{
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Вычисление площади</h1>
+    <p>
+    При попадании фокуса на текстовое поле <br>
+    <form name="calculator">
+            <table>
+              <tr>
+                <td>Сторона</td>
+                <td>
+                  <input name="side" type="text" value="" onblur="calculate()">
+                </td>
+              </tr>
+            <tr>
+              <th>Площадь:</th>
+              <td id="side-after"></td>
+            </tr>
+          </table>
+        
+          <script>
+                var form = document.forms.calculator;
+                        
+                        
+                        var sideElem = form.elements.side;
+                        // клавиатура, вставить/вырезать клавиатурой
+                        sideElem.onkeyup = calculate;
+                        
+                        // любые действия, кроме IE. В IE9 также работает, кроме удаления
+                        sideElem.oninput = calculate;
+                        
+                    function calculate() {
+                        var sum = +sideElem.value;
+                        if (!sum) return;
+                    
+                        sum = sum * sum;
+                      
+                        sum = Math.round(sum);
+                    
+                        var height = sum / sideElem.value * 100 + 'px';
+                        document.getElementById('side-after').innerHTML = sum;
+                    }
+                    
+                calculate();
+          </script>
+    </p>
+</body>
+</html>

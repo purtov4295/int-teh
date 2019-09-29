@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lab5
+    </title>
+</head>
+<style>
+#div1, #div2 {
+    height: 320px;
+    float: left;
+    width: 13%;
+    border: 1px solid #333;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+}
+#div1 a {
+    background: brown;
+}
+#div2 a {
+    background: darkgreen;
+}
+</style>
+<body>
+
+    
+    <div id="div1" ondrop="drop(event, this)" ondragover="allowDrow(event)">
+    <img src="img/r1.gif" draggable="true" ondragstart="drag(event)" id="drag1">
+    <img src="img/r2.gif" draggable="true" ondragstart="drag(event)" id="drag2">
+    <img src="img/r3.gif" draggable="true" ondragstart="drag(event)" id="drag3">
+    <img src="img/r4.gif" draggable="true" ondragstart="drag(event)" id="drag4">
+    </div>
+    <div id="div2" ondrop="drop(event, this)" ondragover="allowDrow(event)">
+        </div>
+  
+    <script>
+        var arr = [];
+        function allowDrow(ev) {
+            ev.preventDefault();
+        }
+        function drag(ev) {
+            ev.dataTransfer.setData("text", ev.target.id);
+            ev.dataTransfer.setData("content", ev.target.textContent);
+        }
+        function drop(ev, block) {
+            ev.preventDefault();
+            var data = ev.dataTransfer.getData("text");
+            var content = ev.dataTransfer.getData("content");
+            if(block.id == "div2"){
+                if(arr.indexOf(content) == -1){
+                    arr.push(content);
+                }
+            }
+            if(block.id == "div1"){
+                if(arr.indexOf(content) != -1){
+                arr.splice(arr.indexOf(content), 1);
+                }
+            }
+            block.appendChild(document.getElementById(data));
+            console.log(arr);
+        }
+
+    </script>
+  
+  
+  
+  
+  </body>
+</html>
