@@ -1,0 +1,12 @@
+body{
+    background: url(fon.gif);
+}
+h1{
+    text-align: center;
+    font-size: 40px;
+    margin-top: 5px;
+}
+p{
+    line-height: 3;
+    font-size: 20px;
+}
