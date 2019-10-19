@@ -1,0 +1,95 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	#menu{
+		cursor: default;
+		float: left;
+	}
+	.menuBlock{
+		padding: 4px;
+		margin: 5px;
+		background-color: #5458ff;
+		float: left;
+		z-index:2;
+		border: 0px;
+	}
+	.menuItems{
+		z-index:1;
+		left: 3px;
+		position:absolute;
+		width: 100%;
+	}
+	.menuWrap{
+		opacity: 0;
+		visibility: visible;
+		position:relative;
+		transition-delay:0.5s;
+	}
+	.menuBlock:hover .menuWrap{
+		opacity: 1;
+		visibility: visible;
+		transition-delay:1s;		
+	}
+	.menuItems div{
+		margin: 3px;
+		background-color:#c9caff;
+		text-align: center;
+		border: 2px solid green;
+	}
+	.menuItems div:hover{
+		background-color:#efefff;
+	}
+	.content{
+		background-color:#d1d2ff;
+	}
+</style>
+</head>
+<!--<script type="text/javascript">
+Function HideElement(element){
+	// слой, стиль которого необходимо изменить передается через element
+	element.style.display="block";
+}
+</script>-->
+<body>
+<div id="menu">
+
+<div class="menuBlock">
+Пункт 1
+<div class="menuWrap">
+<div class="menuItems">
+	<div>поле 1</div>
+	<div>поле 2</div>
+	<div>поле 3
+	<div class="menuWrap">
+	<div class="menuItems">
+	<div>поле 1</div>
+	<div>поле 2</div>
+	</div>
+	</div>
+	</div>
+	</div>
+</div>
+</div>
+</div>
+
+<div class="menuBlock">
+Пункт 2
+<div class="menuWrap">
+<div class="menuItems">
+	<div>поле 1</div>
+	<div>поле 2</div>
+	<div>поле 3</div>
+</div>
+</div>
+</div>
+</div>
+
+
+</body>
+</html>

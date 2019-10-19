@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="WINDOWS-1251"?>
+
+<!-- Ссылка на таблицу XSL преобразований -->
+<?xml-stylesheet type="text/xsl" href="mystyle.xsl"?>
+<solar>
+     <name caption="Название">
+       <product>Расстояние от солнца (а.е)</product>
+       <product>Период обращения (г.)</product>
+       <product>Период вращения вокруг своей оси (ч.)</product>
+       <product>Масса относительно Земли</product>
+       <product>Диаметр (км.)</product>
+       <product>Количество спутников</product>
+     </name>
+
+     <planet caption="Меркурий">
+       <product>0.39</product>
+       <product>0.24</product>
+       <product>1410</product>
+       <product>0.06</product>
+       <product>2440</product>
+       <product>0</product>
+     </planet>
+
+     <planet caption="Венера">
+       <product>0.72</product>
+       <product>0.61</product>
+       <product>5834</product>
+       <product>0.82</product>
+       <product>6050</product>
+       <product>0</product>
+     </planet>
+     <planet caption="Земля">
+       <product>1.00</product>
+       <product>1.00</product>
+       <product>24</product>
+       <product>1.00</product>
+       <product>6378</product>
+       <product>1</product>     
+     </planet>
+
+     <planet caption="Марс">
+       <product>1.55</product>
+       <product>1.88</product>
+       <product>24.5</product>
+       <product>0.11</product>
+       <product>3390</product>
+       <product>2</product>
+     </planet>
+
+     <planet caption="Юпитер">
+       <product>5.20</product>
+       <product>11.86</product>
+       <product>10.0</product>
+       <product>318.0</product>
+       <product>71400</product>
+       <product>16</product>
+     </planet>
+     <planet caption="Сатурн">
+       <product>9.54</product>
+       <product>29.46</product>
+       <product>10.2</product>
+       <product>95.1</product>
+       <product>60400</product>
+       <product>17</product>
+     </planet>
+
+     <planet caption="Уран">
+       <product>19.19</product>
+       <product>84.02</product>
+       <product>17.0</product>
+       <product>14.6</product>
+       <product>24300</product>
+       <product>16</product>
+     </planet>
+
+     <planet caption="Нептун">
+       <product>30.07</product>
+       <product>164.78</product>
+       <product>17.8</product>
+       <product>17.2</product>
+       <product>25050</product>
+       <product>8</product>
+     </planet>
+     <planet caption="Плутон">
+       <product>39.52</product>
+       <product>247.70</product>
+       <product>153.6</product>
+       <product>0.002</product>
+       <product>1500</product>
+       <product>1</product>
+     </planet>
+</solar>
